@@ -1,0 +1,56 @@
+.weather_card {
+    width: 400px;
+    border-radius: 10px;
+    height: 150px;
+    margin: 5px;
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+    font-family: Helvetica;
+    cursor: pointer;
+
+    &.yes {
+        background: url(../../assets/images/sunny_cards.svg);
+    }
+
+    &.no {
+        background: url(../../assets/images/night_card.svg);
+    }
+
+    .location {
+        padding-top: 50px;
+        text-align: center;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .info {
+        display: flex;
+        padding: 0 0 10px 30px;
+        align-items: center;
+
+        .temperature {
+            font-size: 72px;
+        }
+
+        .time {
+            font-size: 14px;
+            line-height: 14px;
+
+            letter-spacing: 0.02em;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.loading_card {
+    width: 400px;
+    border-radius: 10px;
+    height: 150px;
+    margin: 5px;
+    display: flex;
+}

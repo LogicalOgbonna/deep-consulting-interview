@@ -1,0 +1,49 @@
+.my-current-weather {
+    margin-bottom: 20px;
+    font-family: Helvetica;
+    
+    .content {
+        width: 942px;
+        height: 200px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #FFFF;
+
+        &.yes {
+            background-image: url(../../assets/images/home_sunny.svg);
+        }
+        &.no {
+            background-image: url(../../assets/images/home_dark.svg);
+        }
+    }
+
+    .location {
+        padding-top: 50px;
+        text-align: center;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .temperature_time {
+        padding: 0 0 10px 20px;
+
+        .temperature {
+            font-size: 72px;
+        }
+
+        .time {
+            font-size: 18px;
+        }
+    }
+
+}
+
+.loading_weather {
+    width: 942px;
+    height: 200px;
+    border-radius: 5px;
+    color: #FFFF;
+}

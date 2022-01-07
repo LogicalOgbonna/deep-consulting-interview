@@ -1,0 +1,127 @@
+.weatherInfo {
+    width: 942px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    .weather {
+        width: 35%;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 20px 10px;
+        margin-bottom: 20px;
+
+        .content {
+            font-family: Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            padding: 2px 0;
+
+            .title {
+                font-weight: 600;
+                color: #343a40 !important;
+            }
+
+            .subTitle {
+                font-weight: lighter;
+                color: #6c757d;
+            }
+        }
+    }
+
+    .notes {
+        width: 60%;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        display: flex;
+        padding: 20px 5px;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .note_empty {
+            text-align: center;
+            color: #6c757d;
+        }
+
+        .note {
+            width: 90%;
+            border-radius: 4px;
+            border: 1px solid #6c757d;
+            padding: 5px;
+            margin: 2px 10px;
+            min-height: 30px;
+            display: flex;
+            flex-direction: column;
+
+            .text {
+                font-size: 12px;
+
+                p {
+                    margin: 0;
+                    font-size: 10px;
+                    color: #6c757d;
+                    text-align: end;
+                }
+
+                .editing {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    textarea {
+                        width: 50%;
+                        border-radius: 5px;
+                        margin: 10px;
+                        padding: 5px;
+                    }
+                }
+            }
+
+            .action {
+                display: flex;
+                justify-content: flex-end;
+
+                >:first-child {
+                    margin-right: 7px;
+                }
+            }
+
+            .edit {
+                cursor: pointer;
+            }
+
+            .delete {
+                cursor: pointer;
+            }
+        }
+
+        .text-area {
+            width: 90%;
+
+            textarea {
+                display: block;
+                width: 100%;
+                border-radius: 5px;
+                margin: 10px;
+                padding: 5px;
+            }
+
+            .button {
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    width: 60px;
+                    height: 40px;
+                    border-radius: 5px;
+                    border: none;
+                }
+            }
+
+        }
+    }
+}
