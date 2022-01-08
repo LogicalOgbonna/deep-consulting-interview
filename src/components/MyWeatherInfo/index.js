@@ -8,7 +8,7 @@ import LoadingWeather from './LoadingWeather';
 
 const MyWeatherInfo = ({ data, loading }) => {
     return (
-        <div className="my-current-weather">
+        <div data-testid="my-weather-info" className="my-current-weather">
             {loading ?
                 <LoadingWeather />
                 :
@@ -34,7 +34,14 @@ const MyWeatherInfo = ({ data, loading }) => {
 };
 
 MyWeatherInfo.propTypes = {
-    data: PropTypes.any,
+    data: PropTypes.shape({
+        is_day: PropTypes.string,
+        name: PropTypes.string,
+        country: PropTypes.string,
+        localtime: PropTypes.string,
+        weather_descriptions: PropTypes.arrayOf(PropTypes.string),
+        temperature: PropTypes.number,
+    }),
     loading: PropTypes.bool
 };
 

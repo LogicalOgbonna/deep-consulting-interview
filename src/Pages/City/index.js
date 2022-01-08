@@ -13,7 +13,7 @@ const City = () => {
     const [isFavorite, setIsFavorite] = useState(false);
     const dispatch = useDispatch();
     const { city: cityInfo, cityLoading } = useSelector(state => state.headerReducer);
-    const { favorites } = useSelector(state => state.homeReducer);
+    const { largeCities: favorites } = useSelector(state => state.homeReducer);
     useEffect(() => {
         dispatch(getCity(city));
         setIsFavorite(checkFavorite(favorites, city));

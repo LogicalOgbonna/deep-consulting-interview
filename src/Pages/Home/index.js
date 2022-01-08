@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Favorites, MyWeatherInfo, WeatherCards } from '../../components';
+import { MyWeatherInfo, WeatherCards } from '../../components';
 import { getLargestCitiesAC, getMyWeatherWithMyLocationAC } from '../../store/home/home.action';
 import { getCurrentLocation } from '../../utils/geolocation';
 import './home.scss';
@@ -13,7 +12,7 @@ const HomePage = () => {
         permitted: false
     });
 
-    const { myWeatherInfo, myWeatherInfoLoading, favorites, largeCities, largeCitiesLoading } = useSelector(state => state.homeReducer);
+    const { myWeatherInfo, myWeatherInfoLoading, largeCities, largeCitiesLoading } = useSelector(state => state.homeReducer);
     useEffect(() => {
         const onGetUserLongLat = ({ permitted, long, lat }) => {
             if (permitted) {
@@ -28,11 +27,10 @@ const HomePage = () => {
         dispatch(getLargestCitiesAC());
     }, []);
     return (
-        <div className="home">
+        <div data-testid="home-page" className="home">
             {position.permitted &&
                 <MyWeatherInfo data={myWeatherInfo} loading={myWeatherInfoLoading} />
             }
-            <Favorites data={favorites} />
             <WeatherCards data={largeCities} loading={largeCitiesLoading} />
         </div>
     );

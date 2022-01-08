@@ -55,16 +55,15 @@ const getLargestCitiesMW = store => next => async action => {
 
 const addFavoriteMW = store => next => action => {
     if (action.type !== 'user/add-favorite') return next(action);
-    const { homeReducer: { favorites } } = store.getState();
-    store.dispatch(homeSetter({ type: 'favorites', data: [...favorites, action.payload] }));
+    const { homeReducer: { largeCities: favorites } } = store.getState();
+    store.dispatch(homeSetter({ type: 'largeCities', data: [...favorites, action.payload] }));
 };
 
 const removeFromFavoriteMW = store => next => action => {
     if (action.type !== 'user/remove-favorite') return next(action);
-    const { homeReducer: { favorites } } = store.getState();
+    const { homeReducer: { largeCities: favorites } } = store.getState();
     const newFavorites = favorites.filter(f => f.name !== action.payload);
-    console.log(newFavorites);
-    store.dispatch(homeSetter({ type: 'favorites', data: newFavorites }));
+    store.dispatch(homeSetter({ type: 'largeCities', data: newFavorites }));
 };
 
 export default [getMyWeatherWithMyLocationMW, getLargestCitiesMW, addFavoriteMW, removeFromFavoriteMW];

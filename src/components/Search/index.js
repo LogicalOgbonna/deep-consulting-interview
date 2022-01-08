@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import './index.scss';
 
-const Search = ({ placeholder }) => {
+const Search = ({ placeholder, navigate }) => {
     const [searchInput, setSearchInput] = useState('');
-    const navigate = useNavigate();
+
 
     const onSearchInputChange = ({ target: { value } }) => {
         setSearchInput(value);
@@ -14,19 +14,18 @@ const Search = ({ placeholder }) => {
     const onSubmit = (e) => {
         if (e.key === 'Enter') {
             navigate(`/${searchInput}`);
+            setSearchInput('');
         }
     };
 
     return (
-        <React.Fragment>
-            <input
-                value={searchInput}
-                onChange={onSearchInputChange}
-                className="autocomplete-input"
-                placeholder={placeholder}
-                onKeyPress={onSubmit}
-            />
-        </React.Fragment>
+        <input
+            value={searchInput}
+            onChange={onSearchInputChange}
+            className="autocomplete-input"
+            placeholder={placeholder}
+            onKeyPress={onSubmit}
+        />
     );
 };
 
@@ -36,6 +35,7 @@ Search.propTypes = {
         PropTypes.string,
     ),
     placeholder: PropTypes.string,
+    navigate: PropTypes.func,
 };
 Search.defaultProps = {
     placeholder: 'Search city',

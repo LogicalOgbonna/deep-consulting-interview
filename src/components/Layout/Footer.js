@@ -3,7 +3,7 @@ import './Footer.scss';
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer data-testid="footer" className="footer">
             Designed with &hearts; by Arinze Ogbonna
         </footer>
     );

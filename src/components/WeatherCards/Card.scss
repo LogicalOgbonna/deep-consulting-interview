@@ -7,7 +7,6 @@
     align-items: flex-end;
     color: #fff;
     font-family: Helvetica;
-    cursor: pointer;
 
     &.yes {
         background: url(../../assets/images/sunny_cards.svg);
@@ -27,8 +26,11 @@
 
     .info {
         display: flex;
-        padding: 0 0 10px 30px;
+        padding: 0 0 0 30px;
         align-items: center;
+        width: 80%;
+        height: inherit;
+        cursor: pointer;
 
         .temperature {
             font-size: 72px;
@@ -44,6 +46,14 @@
                 margin: 0;
             }
         }
+    }
+
+    .action {
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 5px 5px 0;
+        cursor: pointer;
     }
 }
 
