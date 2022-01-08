@@ -14,7 +14,7 @@ export const getMyCurrentCityService = async position => {
 export const getMyCurrentWeatherInformationService = async ({ success, ...rest }) => {
     if (!success) return errorHandler({ message: 'Could not retrieve City information' });
     try {
-        const { data } = await axios.get(`http://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHERSTACK_ACCESS_KEY}&query=${rest?.data?.address?.city || rest?.data?.address?.state}`);
+        const { data } = await axios.get(`https://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHERSTACK_ACCESS_KEY}&query=${rest?.data?.address?.city || rest?.data?.address?.state}`);
         if (Object.keys(data).includes('success')) {
             if (!data.success) return errorHandler({ message: data.error.info });
         }
@@ -47,7 +47,7 @@ export const getLargestCitiesService = async () => {
 
 export const getWeatherInfoOfCityService = async (city) => {
     try {
-        const { data } = await axios.get(`http://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHERSTACK_ACCESS_KEY}&query=${city}`);
+        const { data } = await axios.get(`https://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHERSTACK_ACCESS_KEY}&query=${city}`);
         if (Object.keys(data).includes('success')) {
             if (!data.success) return errorHandler({ message: data.error.info });
         }

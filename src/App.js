@@ -11,7 +11,7 @@ toast.configure();
 
 function App() {
   return (
-    <div className="App">
+    <div data-test="AppComponent" className="App">
       <Router>
         <Layout>
           <Routes>
