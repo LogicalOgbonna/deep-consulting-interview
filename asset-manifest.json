@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/deep-consulting-interview/static/css/main.0ded3681.css",
-    "main.js": "/deep-consulting-interview/static/js/main.e2b3be75.js",
+    "main.js": "/deep-consulting-interview/static/js/main.a5d1d425.js",
     "static/js/787.3a214e62.chunk.js": "/deep-consulting-interview/static/js/787.3a214e62.chunk.js",
     "static/media/home_dark.svg": "/deep-consulting-interview/static/media/home_dark.ab99688472b8304cf821.svg",
     "static/media/blowing_snow.svg": "/deep-consulting-interview/static/media/blowing_snow.d8aba37e731469d3c884652a6a90265c.svg",
@@ -40,11 +40,11 @@
     "static/media/star.svg": "/deep-consulting-interview/static/media/star.00a35d593adee028a629d64655080de7.svg",
     "static/media/back.svg": "/deep-consulting-interview/static/media/back.79b03ef44eb19b8d61fc989bbfbb95d7.svg",
     "main.0ded3681.css.map": "/deep-consulting-interview/static/css/main.0ded3681.css.map",
-    "main.e2b3be75.js.map": "/deep-consulting-interview/static/js/main.e2b3be75.js.map",
+    "main.a5d1d425.js.map": "/deep-consulting-interview/static/js/main.a5d1d425.js.map",
     "787.3a214e62.chunk.js.map": "/deep-consulting-interview/static/js/787.3a214e62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ded3681.css",
-    "static/js/main.e2b3be75.js"
+    "static/js/main.a5d1d425.js"
   ]
 }
