@@ -4,7 +4,7 @@ import './Footer.scss';
 const Footer = () => {
     return (
         <footer data-testid="footer" className="footer">
-            Designed with &hearts; by Arinze Ogbonna
+            Designed with &hearts;
         </footer>
     );
 };
