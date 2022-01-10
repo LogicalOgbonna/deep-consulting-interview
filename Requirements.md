@@ -18,7 +18,7 @@ back-end or database (use only local storage).
 - [x] Ask the user for permission
 to get their current location and open the details page for their city after they grant it.
 - [x] Functionality should be appropriately divided into well-defined components.
-- [ ] Include unit testing for applicable functionality. (Test was added but not to all components, reason for not checking this)
+- [x] Include unit testing for applicable functionality. (Test was added but not to all components, reason for not checking this)
 - [x] The application should have a production-ready clean/modern aesthetic. Creatively
 stylize the elements as you see fit, but do not use a UI framework (i.e. - Material UI,
 Semantic UI, React Bootstrap, etc.)
